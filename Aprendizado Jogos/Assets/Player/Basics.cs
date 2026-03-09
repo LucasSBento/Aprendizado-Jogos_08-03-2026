@@ -16,10 +16,12 @@ public class Basics : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.position += vel * Vector3.right * Time.deltaTime;
+            transform.rotation = new Quaternion(0,0,0,1);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position += vel * Vector3.left * Time.deltaTime;
+            transform.rotation = new Quaternion(0,-180,0,1);
         }
     }
 }
