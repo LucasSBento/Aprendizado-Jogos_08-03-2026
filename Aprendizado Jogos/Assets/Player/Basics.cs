@@ -5,6 +5,7 @@ public class Basics : MonoBehaviour
 {
     public float vel;
     public float jump;
+    public Rigidbody2D rb2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,9 +25,9 @@ public class Basics : MonoBehaviour
             transform.position += vel * Vector3.left * Time.deltaTime;
             transform.rotation = new Quaternion(0,-180,0,1);
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            
+            rb2.AddForce(transform.up * jump, ForceMode2D.Impulse);
         }
     }
 }
