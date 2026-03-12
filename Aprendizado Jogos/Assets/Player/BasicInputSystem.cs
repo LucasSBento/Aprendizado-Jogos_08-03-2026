@@ -28,6 +28,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     public void FixedUpdate()
     {
-        rb.linearVelocity = vel * vector * Time.deltaTime;
+        rb.linearVelocity = new Vector2(vector.x * vel, rb.linearVelocity.y);
     }
 }

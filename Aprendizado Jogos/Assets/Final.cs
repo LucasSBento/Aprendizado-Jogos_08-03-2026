@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Final : MonoBehaviour
 {
+    public GameObject finalCanva;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +17,6 @@ public class Final : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        print("Algo");
+        finalCanva.SetActive(true);
     }
 }
